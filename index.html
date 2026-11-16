@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a7312a">
+  <meta name="description" content="Демонстрационная версия сайта Аппетитный рай. Меню, цены и изображения приведены для примера. Заказы не принимаются.">
+  <title>Аппетитный рай — демонстрационная версия</title>
+  <link rel="stylesheet" href="styles.css?v=20261116-sushi-rolls">
+  <script src="script.js?v=20261116-sushi-rolls" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <aside class="demo-banner" aria-label="Статус сайта"><strong>Демонстрационная версия.</strong> Меню, цены и изображения — примеры. Заказы пока не принимаются.</aside>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="nav-link" href="#categories">Меню</a>
+      <a class="brand" href="#home" aria-label="Аппетитный рай — на главную">
+        <img src="logo-expanded.png" alt="Аппетитный рай" width="1280" height="641">
+      </a>
+      <a class="nav-link" href="#about">О нас</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню">
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Основная навигация">
+        <a href="#categories">Меню</a>
+        <a href="#about">О нас</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Аппетитный рай</p>
+        <h1 id="hero-title">Вкусно<br>как <em>дома.</em></h1>
+        <p class="hero-copy">Тёплый стол, знакомые вкусы и щедрые порции — без лишних слов.</p>
+        <a class="button" href="#categories">Смотреть меню <span aria-hidden="true">↓</span></a>
+        <p class="hero-note">Просто. Сытно. По-домашнему.</p>
+      </div>
+      <div class="hero-visual">
+        <img src="venue-exterior-retouched.png" alt="Фасад и вход в заведение «Аппетитный рай»" width="1672" height="941" fetchpriority="high">
+        <nav class="hero-menu" aria-label="Популярное в меню">
+          <a href="#categories" data-menu-filter="shawarma">Шаурма</a>
+          <a href="#categories" data-menu-filter="sushi-rolls">Суши/Ролы</a>
+          <a href="#categories" data-menu-filter="meat">Мясо</a>
+        </nav>
+      </div>
+      <div class="hero-bottom"><span>Добро пожаловать</span><span aria-hidden="true"><svg class="spark" viewBox="0 0 48 48" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><path d="M24 3v42M3 24h42M9 9l30 30M9 39 39 9"/></svg></span></div>
+    </section>
+
+    <section class="categories section-pad" id="categories" aria-labelledby="categories-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> Выберите своё</p><h2 id="categories-title">Меню на каждый день</h2></div>
+        <p>Знакомое и любимое</p>
+      </div>
+      <div class="menu-toolbar">
+        <label class="menu-search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg><span class="sr-only">Найти блюдо по названию или составу</span><input id="menu-search" type="search" placeholder="Найти блюдо" autocomplete="off" aria-controls="menu-items"></label>
+        <div class="menu-tabs" role="group" aria-label="Категории меню">
+          <button type="button" class="menu-tab is-active" data-filter="all" aria-pressed="true" aria-controls="menu-items">Все</button>
+          <button type="button" class="menu-tab" data-filter="shawarma" aria-pressed="false" aria-controls="menu-items">Шаурма</button>
+          <button type="button" class="menu-tab" data-filter="sushi-rolls" aria-pressed="false" aria-controls="menu-items">Суши/Ролы</button>
+          <button type="button" class="menu-tab" data-filter="hotdogs" aria-pressed="false" aria-controls="menu-items">Хот-доги</button>
+          <button type="button" class="menu-tab" data-filter="burgers" aria-pressed="false" aria-controls="menu-items">Бургеры</button>
+          <button type="button" class="menu-tab" data-filter="meat" aria-pressed="false" aria-controls="menu-items">Мясное ассорти</button>
+          <button type="button" class="menu-tab" data-filter="drinks" aria-pressed="false" aria-controls="menu-items">Напитки</button>
+        </div>
+      </div>
+      <p class="menu-results" id="menu-results" role="status" aria-live="polite"></p>
+      <ul class="menu-items" id="menu-items">
+<li class="menu-item" data-category="shawarma" data-dish-id="dish-1" data-price="250" data-large-price="310"><div class="menu-photo" role="img" aria-label="Классическая с курицей — демонстрационное изображение" style="background-position: 0% 0%"></div><div class="menu-item-copy"><h4 id="dish-1-title">Классическая с курицей</h4><p>Курица, капуста, огурец, томат и чесночный соус в лаваше.</p><strong class="menu-price">от 250 ₽</strong></div><button class="button cart-add size-choice" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-label="Выбрать размер: Классическая с курицей">Выбрать размер</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-1-title dish-1-action"><span id="dish-1-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="shawarma" data-dish-id="dish-2" data-price="290" data-large-price="350"><div class="menu-photo" role="img" aria-label="Сырная — демонстрационное изображение" style="background-position: 50% 0%"></div><div class="menu-item-copy"><h4 id="dish-2-title">Сырная</h4><p>Курица, сыр, свежие овощи и сливочный соус в лаваше.</p><strong class="menu-price">от 290 ₽</strong></div><button class="button cart-add size-choice" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-label="Выбрать размер: Сырная">Выбрать размер</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-2-title dish-2-action"><span id="dish-2-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="shawarma" data-dish-id="dish-3" data-price="270" data-large-price="330"><div class="menu-photo" role="img" aria-label="Острая — демонстрационное изображение" style="background-position: 100% 0%"></div><div class="menu-item-copy"><h4 id="dish-3-title">Острая</h4><p>Курица, овощи, маринованный перец и острый соус в лаваше.</p><strong class="menu-price">от 270 ₽</strong></div><button class="button cart-add size-choice" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-label="Выбрать размер: Острая">Выбрать размер</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-3-title dish-3-action"><span id="dish-3-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="hotdogs" data-dish-id="dish-15" data-price="190"><div class="menu-photo" role="img" aria-label="Классический хот-дог — демонстрационное изображение" style="background-image: url('menu-extra-demo.png'); background-position: 100% 50%"></div><div class="menu-item-copy"><h4 id="dish-15-title">Классический хот-дог</h4><p>Сосиска, мягкая булочка, кетчуп и горчица.</p><strong class="menu-price">190 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Классический хот-дог">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-15-title dish-15-action"><span id="dish-15-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="hotdogs" data-dish-id="dish-16" data-price="230"><div class="menu-photo" role="img" aria-label="Сырный хот-дог — демонстрационное изображение" style="background-image: url('menu-extra-demo.png'); background-position: 0% 100%"></div><div class="menu-item-copy"><h4 id="dish-16-title">Сырный хот-дог</h4><p>Сосиска, сыр и сырный соус в булочке.</p><strong class="menu-price">230 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Сырный хот-дог">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-16-title dish-16-action"><span id="dish-16-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="burgers" data-dish-id="dish-17" data-price="290"><div class="menu-photo" role="img" aria-label="Классический бургер — демонстрационное изображение" style="background-image: url('menu-extra-demo.png'); background-position: 50% 100%"></div><div class="menu-item-copy"><h4 id="dish-17-title">Классический бургер</h4><p>Говяжья котлета, томат, салат и соус.</p><strong class="menu-price">290 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Классический бургер">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-17-title dish-17-action"><span id="dish-17-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="burgers" data-dish-id="dish-18" data-price="320"><div class="menu-photo" role="img" aria-label="Чизбургер — демонстрационное изображение" style="background-image: url('menu-extra-demo.png'); background-position: 100% 100%"></div><div class="menu-item-copy"><h4 id="dish-18-title">Чизбургер</h4><p>Говяжья котлета, сыр, огурец и соус.</p><strong class="menu-price">320 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Чизбургер">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-18-title dish-18-action"><span id="dish-18-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="meat" data-dish-id="dish-7" data-price="320"><div class="menu-photo" role="img" aria-label="Куриный шашлык — демонстрационное изображение" style="background-position: 0% 100%"></div><div class="menu-item-copy"><h4 id="dish-7-title">Куриный шашлык</h4><p>Кусочки курицы на огне с луком и соусом.</p><strong class="menu-price">320 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Куриный шашлык">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-7-title dish-7-action"><span id="dish-7-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="meat" data-dish-id="dish-8" data-price="350"><div class="menu-photo" role="img" aria-label="Люля-кебаб — демонстрационное изображение" style="background-position: 50% 100%"></div><div class="menu-item-copy"><h4 id="dish-8-title">Люля-кебаб</h4><p>Мясной кебаб с зеленью, луком и лавашом.</p><strong class="menu-price">350 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Люля-кебаб">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-8-title dish-8-action"><span id="dish-8-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="meat" data-dish-id="dish-9" data-price="390"><div class="menu-photo" role="img" aria-label="Шашлык из свинины — демонстрационное изображение" style="background-position: 100% 100%"></div><div class="menu-item-copy"><h4 id="dish-9-title">Шашлык из свинины</h4><p>Мясо на огне с маринованным луком и томатным соусом.</p><strong class="menu-price">390 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Шашлык из свинины">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-9-title dish-9-action"><span id="dish-9-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="drinks" data-dish-id="dish-4" data-price="100"><div class="menu-photo" role="img" aria-label="Ягодный морс — демонстрационное изображение" style="background-position: 0% 50%"></div><div class="menu-item-copy"><h4 id="dish-4-title">Ягодный морс</h4><p>Ягодный напиток к горячим блюдам.</p><strong class="menu-price">100 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Ягодный морс">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-4-title dish-4-action"><span id="dish-4-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="drinks" data-dish-id="dish-5" data-price="70"><div class="menu-photo" role="img" aria-label="Чай — демонстрационное изображение" style="background-position: 50% 50%"></div><div class="menu-item-copy"><h4 id="dish-5-title">Чай</h4><p>Чёрный или зелёный — на выбор.</p><strong class="menu-price">70 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Чай">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-5-title dish-5-action"><span id="dish-5-action">Подробнее →</span></button></li>
+<li class="menu-item" data-category="drinks" data-dish-id="dish-6" data-price="150"><div class="menu-photo" role="img" aria-label="Кофе — демонстрационное изображение" style="background-position: 100% 50%"></div><div class="menu-item-copy"><h4 id="dish-6-title">Кофе</h4><p>Американо или капучино.</p><strong class="menu-price">150 ₽</strong></div><button class="button cart-add" type="button" aria-label="В корзину: Кофе">В корзину</button><button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-6-title dish-6-action"><span id="dish-6-action">Подробнее →</span></button></li>
+        <li class="menu-item" data-category="drinks" data-dish-id="dish-19" data-price="160">
+          <div class="menu-photo" role="img" aria-label="Адреналин — демонстрационное изображение" style="background-image: url('energy-drinks-demo.png'); background-position: 0% 0%"></div>
+          <div class="menu-item-copy"><h4 id="dish-19-title">Адреналин</h4><p>Энергетический напиток Adrenaline Rush.</p><strong class="menu-price">160 ₽</strong></div>
+          <button class="button cart-add" type="button" aria-label="В корзину: Адреналин">В корзину</button>
+          <button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-19-title dish-19-action"><span id="dish-19-action">Подробнее →</span></button>
+        </li>
+        <li class="menu-item" data-category="drinks" data-dish-id="dish-20" data-price="160">
+          <div class="menu-photo" role="img" aria-label="Адреналин белый — демонстрационное изображение" style="background-image: url('energy-drinks-demo.png'); background-position: 50% 0%"></div>
+          <div class="menu-item-copy"><h4 id="dish-20-title">Адреналин белый</h4><p>Энергетический напиток Adrenaline Rush в белой банке.</p><strong class="menu-price">160 ₽</strong></div>
+          <button class="button cart-add" type="button" aria-label="В корзину: Адреналин белый">В корзину</button>
+          <button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-20-title dish-20-action"><span id="dish-20-action">Подробнее →</span></button>
+        </li>
+        <li class="menu-item" data-category="drinks" data-dish-id="dish-21" data-price="150">
+          <div class="menu-photo" role="img" aria-label="Красный Burn — демонстрационное изображение" style="background-image: url('energy-drinks-demo.png'); background-position: 100% 0%"></div>
+          <div class="menu-item-copy"><h4 id="dish-21-title">Красный Burn</h4><p>Энергетический напиток Burn в красной банке.</p><strong class="menu-price">150 ₽</strong></div>
+          <button class="button cart-add" type="button" aria-label="В корзину: Красный Burn">В корзину</button>
+          <button class="menu-item-open" type="button" aria-haspopup="dialog" aria-controls="dish-dialog" aria-labelledby="dish-21-title dish-21-action"><span id="dish-21-action">Подробнее →</span></button>
+        </li>
+        <li class="menu-group-heading" data-menu-group="rolls"><h3>Роллы</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Куро ролл</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Калифорния классик</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Окинири</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Калифорния унаги</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Филадельфия</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Филадельфия гранд</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Филадельфия крабс</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Эби ролл темпура</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Эби сливочный</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Эби чиз</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Канада</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Якана</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Чикен с авокадо</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Лосось гриль</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Такуми</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Цезарь ролл</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="rolls"><div class="menu-item-copy"><h4>Миан</h4></div></li>
+        <li class="menu-group-heading" data-menu-group="maki"><h3>Маки</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="maki"><div class="menu-item-copy"><h4>Маки с лососем</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="maki"><div class="menu-item-copy"><h4>Маки с угрём</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="maki"><div class="menu-item-copy"><h4>Маки с креветкой</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="maki"><div class="menu-item-copy"><h4>Маки с огурцом</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="maki"><div class="menu-item-copy"><h4>Маки с авокадо</h4></div></li>
+        <li class="menu-group-heading" data-menu-group="baked"><h3>Запечённые роллы</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="baked"><div class="menu-item-copy"><h4>Запечённый Ойси</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="baked"><div class="menu-item-copy"><h4>Запечённый Сайго</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="baked"><div class="menu-item-copy"><h4>Запечённый ролл с креветкой</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="baked"><div class="menu-item-copy"><h4>Запечённый ролл с лососем</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="baked"><div class="menu-item-copy"><h4>Запечённый ролл с угрём</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="baked"><div class="menu-item-copy"><h4>Запечённый ролл с курицей</h4></div></li>
+        <li class="menu-group-heading" data-menu-group="tempura"><h3>Роллы темпура</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="tempura"><div class="menu-item-copy"><h4>Темпура с креветкой</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="tempura"><div class="menu-item-copy"><h4>Темпура с лососем</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="tempura"><div class="menu-item-copy"><h4>Темпура с курицей</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="tempura"><div class="menu-item-copy"><h4>Темпура с угрём</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="tempura"><div class="menu-item-copy"><h4>Темпура с крабом</h4></div></li>
+        <li class="menu-group-heading" data-menu-group="sushi"><h3>Суши</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sushi"><div class="menu-item-copy"><h4>Суши с лососем</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sushi"><div class="menu-item-copy"><h4>Суши с угрём</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sushi"><div class="menu-item-copy"><h4>Суши с креветкой</h4></div></li>
+        <li class="menu-group-heading" data-menu-group="gunkan"><h3>Гунканы спайси</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="gunkan"><div class="menu-item-copy"><h4>Гункан с лососем</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="gunkan"><div class="menu-item-copy"><h4>Гункан с креветкой</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="gunkan"><div class="menu-item-copy"><h4>Гункан с крабом</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="gunkan"><div class="menu-item-copy"><h4>Гункан с угрём</h4></div></li>
+        <li class="menu-group-heading" data-menu-group="wok"><h3>Вок</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="wok"><div class="menu-item-copy"><h4>Вок с курицей</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="wok"><div class="menu-item-copy"><h4>Вок с креветкой</h4></div></li>
+        <li class="menu-group-heading" data-menu-group="sweet"><h3>Сладкие роллы</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sweet"><div class="menu-item-copy"><h4>Тропический рай</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sweet"><div class="menu-item-copy"><h4>Сочный рай</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sweet"><div class="menu-item-copy"><h4>Арахисовый рай</h4></div></li>
+        <li class="menu-group-heading" data-menu-group="sets"><h3>Сеты</h3></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sets"><div class="menu-item-copy"><h4>Сет Маки таки</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sets"><div class="menu-item-copy"><h4>Сет Рай</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sets"><div class="menu-item-copy"><h4>Сет Шеф</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sets"><div class="menu-item-copy"><h4>Сет Микс</h4></div></li>
+        <li class="menu-item menu-item-name" data-category="sushi-rolls" data-menu-group="sets"><div class="menu-item-copy"><h4>Сет Сладкий</h4></div></li>
+      </ul>
+      <p class="menu-empty" id="menu-empty" hidden>Ничего не найдено. Попробуйте другое название или выберите «Все».</p>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-copy">
+        <p class="eyebrow"><span></span> Добро пожаловать за общий стол</p>
+        <h2 id="about-title">Вкусно,<br>сытно,<br><em>по-домашнему.</em></h2>
+        <p>Знакомые блюда и атмосфера, в которой можно выдохнуть. Накладываем щедро — как для своих.</p>
+      </div>
+      <div class="about-mark" aria-hidden="true"><svg class="spark" viewBox="0 0 48 48" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><path d="M24 3v42M3 24h42M9 9l30 30M9 39 39 9"/></svg></div>
+    </section>
+    <section class="contacts section-pad" id="contacts" aria-labelledby="contacts-title">
+      <div class="contact-copy">
+      <p class="eyebrow">Свяжитесь с нами</p>
+      <h2 id="contacts-title">Контакты</h2>
+      <address><p class="contact-phone" aria-label="Демонстрационный номер телефона">+7 (000) 000-00-00</p><p class="contact-demo-note" id="contact-phone-note">Демонстрационный номер</p>
+        <a class="button contact-order" href="tel:+70000000000" aria-describedby="contact-phone-note">Заказать</a>
+        <p class="contact-address">г. Калуга, ул. Хрустальная, 18</p></address>
+      <div class="contact-map-links" aria-label="Открыть адрес на карте">
+        <a class="button" href="https://yandex.ru/maps/?mode=routes&amp;rtext=~%D0%9A%D0%B0%D0%BB%D1%83%D0%B3%D0%B0%2C+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A5%D1%80%D1%83%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%2C+18" target="_blank" rel="noopener noreferrer">Яндекс Карты <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></a>
+        <a class="button" href="https://2gis.ru/search/%D0%9A%D0%B0%D0%BB%D1%83%D0%B3%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A5%D1%80%D1%83%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%2C%2018" target="_blank" rel="noopener noreferrer">2ГИС <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></a>
+      </div>
+      </div>
+      <section class="contact-preorder" aria-labelledby="preorder-title">
+        <h3 id="preorder-title">Предзаказ на мероприятия</h3>
+        <p>Блюда из меню можно заказать заранее на банкет, день рождения, корпоратив или семейный праздник.</p>
+        <p>Позвоните нам, чтобы обсудить дату, количество гостей и блюда.</p>
+      </section>
+    </section>
+  </main>
+  <dialog class="dish-dialog" id="dish-dialog" aria-labelledby="dish-dialog-title" aria-describedby="dish-dialog-description">
+    <div class="dish-dialog-panel">
+      <form method="dialog" class="dish-dialog-close"><button type="submit" aria-label="Закрыть подробности" autofocus><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></form>
+      <div class="menu-photo dish-dialog-photo" role="img"></div>
+      <div class="dish-dialog-copy">
+        <h2 id="dish-dialog-title"></h2>
+        <p class="eyebrow">Состав и описание</p>
+        <p id="dish-dialog-description"></p>
+        <label class="dish-size" hidden>
+          Размер
+          <select id="dish-size">
+            <option value="">Средняя</option>
+            <option value="-large">Большая</option>
+          </select>
+        </label>
+        <strong class="menu-price dish-dialog-price" aria-live="polite"></strong>
+        <button class="button" id="dish-add-to-cart" type="button">Добавить в корзину</button>
+        <p id="dish-cart-status" role="status"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home" aria-label="Аппетитный рай — на главную"><img src="logo-expanded.png" alt="" width="1280" height="641"></a>
+    <p>Сытно. Просто. По-домашнему.</p>
+    <nav class="footer-documents" aria-label="Документы">
+      <a href="privacy.html">Политика обработки персональных данных</a>
+      <a href="ordering.html">Заказ, доставка и возврат</a>
+    </nav>
+    <a href="#home">Наверх ↑</a>
+  </footer>
+  <button id="cart-toggle" class="cart-toggle" type="button" aria-haspopup="dialog" aria-controls="cart-dialog" aria-label="Открыть корзину">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 3h2l2.5 12h11l2-8H6M9 20h.01M18 20h.01" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+    <span>Корзина <span id="cart-count">0</span><small id="cart-button-total">0 ₽</small></span>
+  </button>
+  <p class="sr-only" id="cart-status" role="status"></p>
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title" aria-describedby="cart-demo-note">
+    <div class="cart-panel">
+      <header class="cart-header"><h2 id="cart-title">Ваша корзина</h2><form method="dialog"><button id="cart-close" class="cart-close" aria-label="Закрыть корзину" autofocus>×</button></form></header>
+      <p id="cart-empty">Корзина пока пуста. Добавьте блюда из меню.</p>
+      <ul id="cart-list" class="cart-list"></ul>
+      <div id="cart-summary" class="cart-summary" aria-live="polite" aria-atomic="true" hidden><span>Итого</span><strong id="cart-total">0 ₽</strong></div>
+      <p class="cart-demo-note">При заказе свыше 3 000 ₽ доставка бесплатно.</p>
+      <div id="cart-checkout" class="cart-checkout" hidden>
+        <a id="cart-call" class="button" href="tel:+70000000000" aria-describedby="cart-call-note cart-call-placeholder">Позвонить и заказать</a>
+        <p id="cart-call-placeholder">Демонстрационный номер: +7(000)000-00-00. Для реального звонка нужен номер заведения.</p>
+        <p id="cart-call-note">Назовите сотруднику блюда и количество из корзины. Заказ подтверждается во время звонка.</p>
+      </div>
+      <p id="cart-demo-note" class="cart-demo-note">Демонстрационная корзина. Цены приведены для примера.</p>
+    </div>
+  </dialog>
+  <template id="cart-row-template">
+    <li class="cart-row">
+      <div class="cart-item-info"><div class="menu-photo cart-item-photo" aria-hidden="true"></div><div class="cart-item-text"><h3 class="cart-item-title"></h3><p class="cart-item-price"></p></div></div>
+      <div class="cart-row-actions"><div class="cart-counter"><button type="button" data-cart-action="minus">−</button><span class="cart-quantity"></span><button type="button" data-cart-action="plus">+</button></div><button class="cart-remove" type="button" data-cart-action="remove">Удалить</button></div>
+    </li>
+  </template>
+</body>
+</html>
